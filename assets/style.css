@@ -7,7 +7,10 @@ body {
     font-family: 'DryWhiteboardMarker', cursive;
     letter-spacing: -1px; 
     font-size: larger;
+    background-color: #79ceff;
     background-image: url('bg.webp');
+    background-size: cover; 
+    background-position: center; 
     max-width: 1040px;
     margin: auto;
     display: flex;
@@ -178,24 +181,28 @@ li.active {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-
+    text-align: center;
 }
 
 .intro-text{
     margin: 0px auto;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.25); /* Add a semi-transparent white background */
+    padding: 20px; /* Add padding to create space between the text and background */
+    border-radius: 8px; /* Add border radius for a softer appearance */
 }
 
 /* Twitter generator */
 
 .tweet-gen{
-    max-width: 45%;
+    width: 35%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-content: center;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25); /* Add a semi-transparent white background */
+    padding: 20px; /* Add padding to create space between the text and background */
     margin: 0px auto;
 }
 
@@ -271,6 +278,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        background-attachment: fixed; /* Ensure the background image stays fixed on mobile */
+    }
     .modal-content img{
         max-width: 90%;    
     }
@@ -336,11 +346,13 @@ footer {
     .intro-text {
         text-align: center; /* Center align text */
         margin: 1em 0; /* Add spacing */
+        width: 90%;
     }
 
     .tweet-gen {
         max-width: 90%; /* Adjust width for better fit on smaller screens */
         margin: 1em auto; /* Add spacing */
+        width: 90%;
     }
 
     #image-container img {
