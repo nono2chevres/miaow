@@ -119,12 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://i.ibb.co/5j27L4Q/photo-40-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/S60212N/photo-41-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/dtKf3rT/photo-42-2024-04-10-00-21-09.jpg",
-        "https://i.ibb.co/k1Bcmtk/photo-43-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/LhmNCxC/photo-44-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/sRVtrmt/photo-45-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/FB2gL8z/photo-46-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/Wvwf0Rr/photo-47-2024-04-10-00-21-09.jpg",
         "https://i.ibb.co/rtj9SY3/photo-48-2024-04-10-00-21-09.jpg",
+        "https://i.ibb.co/cyFNdQn/photo-1-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/Q8K72tJ/photo-2-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/km38GNH/photo-3-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/Ypwdq7y/photo-4-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/qxkSDVL/photo-5-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/QN30YHV/photo-6-2024-04-11-22-59-30.jpg",
+        "https://i.ibb.co/yhmJpXY/photo-7-2024-04-11-22-59-30.jpg"
+
     ];
     
         const selectedImage = document.getElementById('selected-image');

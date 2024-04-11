@@ -3,6 +3,12 @@
     src: url('DryWhiteboardMarker-Regular.ttf') format('truetype');
 }
 
+header {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 8px; 
+}
+
 body {
     font-family: 'DryWhiteboardMarker', cursive;
     letter-spacing: -1px; 
@@ -23,6 +29,23 @@ body {
     max-width: 50px;
 }
 
+.split-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home-links {
+    width: 45%;
+}
+
+h2  {
+    font-size: 1.2rem;
+    font-variant-caps: small-caps;
+}
 
 .modal {
     display: none;
@@ -41,7 +64,7 @@ body {
 
 .modal-content {
     background-color: white;
-    max-width: 40%;
+    max-width: 55%;
     margin: 10vh auto;
     padding: 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -67,15 +90,14 @@ body {
 
 /* Fade-in effet */
 .fade-in {
-    opacity: 0; /* Définissez l'opacité initiale à 0 (élément invisible) */
-    transition: opacity 1s ease; /* Animation de fondu */
+    opacity: 0;
+    transition: opacity 1s ease;
     text-rendering: optimizeLegibility; 
 }
 
-/* Lorsque l'élément devient visible */
 .fade-in.active {
-    opacity: 1; /* Augmentez l'opacité à 1 (élément visible) */
-    transform: translateY(0); /* Réinitialisez la position */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #terms-button {
@@ -182,14 +204,15 @@ li.active {
     justify-content: space-around;
     align-content: center;
     text-align: center;
+    margin: 10px;
 }
 
 .intro-text{
     margin: 0px auto;
     width: 35%;
-    background-color: rgba(255, 255, 255, 0.25); /* Add a semi-transparent white background */
-    padding: 20px; /* Add padding to create space between the text and background */
-    border-radius: 8px; /* Add border radius for a softer appearance */
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 20px;
+    border-radius: 8px; 
 }
 
 /* Twitter generator */
@@ -201,21 +224,20 @@ li.active {
     flex-direction: column;
     text-align: center;
     align-content: center;
-    background-color: rgba(255, 255, 255, 0.25); /* Add a semi-transparent white background */
-    padding: 20px; /* Add padding to create space between the text and background */
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding: 20px; 
     margin: 0px auto;
 }
 
 #image-container img  {
-    width: 350px;
-    height: 250px;
+    width: 90%;
+    max-height: 250px;
     object-fit: scale-down;
     border-radius: 8px;
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
 #tweet-output {
-    width: 350px;
     box-sizing: border-box; /* Ensures padding and border are included in the width */
 
 }
@@ -270,7 +292,7 @@ button:disabled {
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
     width: 40%;
     margin: 0px auto;
@@ -290,7 +312,7 @@ footer {
     }
 
     body {
-        font-size: 14px; /* Decrease the font size for better readability on smaller screens */
+        font-size: 18px; /* Decrease the font size for better readability on smaller screens */
     }
 
     .top-nav {
@@ -345,7 +367,7 @@ footer {
 
     .intro-text {
         text-align: center; /* Center align text */
-        margin: 1em 0; /* Add spacing */
+        margin: auto;
         width: 90%;
     }
 
@@ -365,7 +387,7 @@ footer {
     }
 
     button {
-        font-size: 16px; /* Increase button font size for better readability */
+        font-size: 18px; /* Increase button font size for better readability */
         padding: 12px 20px; /* Adjust button padding */
         margin-bottom: 1em; /* Add spacing between buttons */
     }
