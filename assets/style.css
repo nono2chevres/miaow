@@ -1,0 +1,377 @@
+@font-face {
+    font-family: 'DryWhiteboardMarker';
+    src: url('DryWhiteboardMarker-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'DryWhiteboardMarker', cursive;
+    letter-spacing: -1px; 
+    font-size: larger;
+    background-image: url('bg.webp');
+    max-width: 1040px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.social-links img{
+    max-width: 50px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y:auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    outline: 0;
+}
+
+.modal-content {
+    background-color: white;
+    max-width: 40%;
+    margin: 10vh auto;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content img{
+    max-width: 300px;
+    max-height: 250px;
+    object-fit: scale-down;
+}
+
+.modal-title{
+    font-weight:bolder;
+    font-size: 1.2rem;
+}
+
+.separator {
+    border-bottom:1px solid #EBC392;
+    margin: 40px;
+}
+
+/* Fade-in effet */
+.fade-in {
+    opacity: 0; /* Définissez l'opacité initiale à 0 (élément invisible) */
+    transition: opacity 1s ease; /* Animation de fondu */
+    text-rendering: optimizeLegibility; 
+}
+
+/* Lorsque l'élément devient visible */
+.fade-in.active {
+    opacity: 1; /* Augmentez l'opacité à 1 (élément visible) */
+    transform: translateY(0); /* Réinitialisez la position */
+}
+
+#terms-button {
+    text-decoration: underline;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+/* menu */
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    padding: 1em 3em 1em 1em;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+.menu > li {
+    padding: 0px;
+    margin-left: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.menu-link, .cleanlink {
+    text-decoration: none;
+    color:#231F13
+}
+
+li.active {
+    color:#231F13;
+    border-bottom:#231F13 1px solid;
+    padding-bottom: 5px;
+
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    padding: 1em;
+}
+ 
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #231F13;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/* Home */
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.intro-text{
+    margin: 0px auto;
+}
+
+/* Twitter generator */
+
+.tweet-gen{
+    max-width: 45%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    margin: 0px auto;
+}
+
+#image-container img  {
+    width: 350px;
+    height: 250px;
+    object-fit: scale-down;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+#tweet-output {
+    width: 350px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+
+}
+
+#tweet-all-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#tweet-two-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#tweet-output, button {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e1e8ed;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+#tweet-output {
+    font-size: 16px;
+    color: #14171a;
+}
+
+button {
+    background-color: #78baeb;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 3px 0; /* Adds a little space between buttons */
+    width: 45%;
+}
+
+#publish-twitter-button {
+    width: 92%;
+}
+
+button:hover {
+    background-color: #3d9ae3;
+}
+
+button:disabled {
+    background-color: #acd5f2;
+    cursor: default;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    width: 40%;
+    margin: 0px auto;
+    border-radius: 8px 8px 0px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content img{
+        max-width: 90%;    
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    body {
+        font-size: 14px; /* Decrease the font size for better readability on smaller screens */
+    }
+
+    .top-nav {
+        padding: 0.5em 1em; /* Adjust padding for the navigation menu */
+    }
+
+    .menu-button-container {
+        display: flex;
+      }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 6em;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #FDFCE8;
+        height: 1.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: #231F13;
+        background-color: #EBC392;
+        align-items: center;
+    }
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+
+    #home {
+        flex-direction: column; /* Adjust layout for smaller screens */
+    }
+
+    .intro-text {
+        text-align: center; /* Center align text */
+        margin: 1em 0; /* Add spacing */
+    }
+
+    .tweet-gen {
+        max-width: 90%; /* Adjust width for better fit on smaller screens */
+        margin: 1em auto; /* Add spacing */
+    }
+
+    #image-container img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #tweet-output {
+        width: 100%; /* Make tweet output and buttons full width */
+    }
+
+    button {
+        font-size: 16px; /* Increase button font size for better readability */
+        padding: 12px 20px; /* Adjust button padding */
+        margin-bottom: 1em; /* Add spacing between buttons */
+    }
+
+    footer {
+        background-color: rgba(255, 255, 255, 0.75);
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 8px 8px 0px 0px;
+        padding: 1em 0; /* Add padding to create space */
+        position: relative; /* Position relative for absolute positioning */
+        bottom: 0; /* Position the footer at the bottom of the viewport */
+    }
+
+    /* Add a wrapper around the main content */
+    .content-wrapper {
+        flex: 1; /* Grow and take up remaining space */
+        overflow-y: auto; /* Add scrollbars when content overflows */
+    }
+}
