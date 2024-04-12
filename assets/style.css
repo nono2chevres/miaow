@@ -294,9 +294,15 @@ button:disabled {
 footer {
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    width: 40%;
-    margin: 0px auto;
+    width: 100%; /* make it full width */
+    margin: 0 auto;
     border-radius: 8px 8px 0px 0px;
+    padding: 1em 0; /* Add some padding */
+    position: fixed; /* Fixed at the bottom */
+    bottom: 0; /* At the bottom */
+    left: 0; /* Align to the left */
+    box-sizing: border-box; /* Include padding and border in the width */
+    z-index: 10; /* Make sure it stacks on top of other content */
 }
 
 @media screen and (max-width: 768px) {
@@ -392,20 +398,6 @@ footer {
         margin-bottom: 1em; /* Add spacing between buttons */
     }
 
-    footer {
-    background-color: rgba(255, 255, 255, 0.75);
-    text-align: center;
-    border-radius: 8px 8px 0px 0px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    z-index: 10;
-    display: none; /* Masquer initialement le footer */
-}
-
 .footer-content {
     display: inline-block;
     margin: 0 auto;
@@ -420,6 +412,7 @@ footer {
 
     /* Add a wrapper around the main content */
     .content-wrapper {
+        padding-bottom: 30px;
         flex: 1; /* Grow and take up remaining space */
         overflow-y: auto; /* Add scrollbars when content overflows */
     }
