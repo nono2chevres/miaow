@@ -292,7 +292,7 @@ button:disabled {
 }
 
 footer {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
     width: 100%; /* make it full width */
     margin: 0 auto;
@@ -412,7 +412,7 @@ footer {
 
     /* Add a wrapper around the main content */
     .content-wrapper {
-        padding-bottom: 30px;
+        padding-bottom: 60px;
         flex: 1; /* Grow and take up remaining space */
         overflow-y: auto; /* Add scrollbars when content overflows */
     }
