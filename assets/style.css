@@ -393,15 +393,30 @@ footer {
     }
 
     footer {
-        background-color: rgba(255, 255, 255, 0.75);
-        text-align: center;
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 8px 8px 0px 0px;
-        padding: 1em 0; /* Add padding to create space */
-        position: absolute; /* Position relative for absolute positioning */
-        bottom: 1rem; /* Position the footer at the bottom of the viewport */
-    }
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    display: none; /* Masquer initialement le footer */
+}
+
+.footer-content {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block; /* Afficher le footer lorsque la classe active est ajoutée */
+}
+
 
     /* Add a wrapper around the main content */
     .content-wrapper {
