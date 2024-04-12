@@ -297,8 +297,7 @@ footer {
     width: 100%; /* make it full width */
     margin: 0 auto;
     border-radius: 8px 8px 0px 0px;
-    padding: 1em 0; /* Add some padding */
-    position: fixed; /* Fixed at the bottom */
+    position: relative; /* Fixed at the bottom */
     bottom: 0; /* At the bottom */
     left: 0; /* Align to the left */
     box-sizing: border-box; /* Include padding and border in the width */
